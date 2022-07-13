@@ -42,11 +42,9 @@ if [[ -z "${PR_HEAD}" ]]; then
   error_exit "PR_HEAD variable must be set"
 fi
 
-# cat <<EOF
 curl \
   -X POST \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: token ${GITHUB_TOKEN}" \
   "${GITHUB_HOST}/repos/${REPOSITORY}/pulls" \
   -d "{\"title\":\"${PR_TITLE}\",\"body\":\"${PR_BODY}\",\"head\":\"${PR_HEAD}\",\"base\":\"${PR_BASE}\"}"
-# EOF
