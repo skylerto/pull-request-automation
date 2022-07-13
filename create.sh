@@ -5,16 +5,16 @@
 #
 # Required environment variables
 #
-# GITHUB_TOKEN: 
-# REPOSITORY: 
-# PR_HEAD: 
+# GITHUB_TOKEN: The PAT to use against github.
+# REPOSITORY: The name of the repository in the format OWNER/REPO.
+# PR_HEAD: The head of the pull request to be merged into the base.
 #
 # Optional environment variables:
 #
 # GITHUB_HOST: the github host to communicate with (defaults to https://api.github.com).
-# PR_TITLE: (defaults to "automated pull request").
-# PR_BODY: (defaults to "pull request created with automation").
-# PR_BASE: (defaults to main)
+# PR_TITLE: The title of the pull request (defaults to "automated pull request").
+# PR_BODY: The body of the pull request (defaults to "pull request created with automation").
+# PR_BASE: The base branch to be merged into (defaults to main).
 #
 
 set -e
